@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+.stat {
+    text-transform: uppercase;
+}
+
+.attributes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.attributes div {
+    display: flex;
+    flex-direction: column;
+}
+
+.attributes span {
+    text-align: center;
+}
+
+.modifier_positive::before {
+    content: '+';
+  }

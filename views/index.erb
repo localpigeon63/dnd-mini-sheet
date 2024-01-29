@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>D&D Mini Sheet</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>🐉 <%= name %></h1>
+  </header>
+  <main>
+    <section class="attributes">
+      <% attributes.each do |stat, score| %>
+        <% is_positive_modifier = modifiers[stat].positive? %>
+        <div>
+          <span class="stat"><%= stat %></span>
+          <span class="score"><%= score %></span>
+          <span class="modifier <%= is_positive_modifier && 'modifier_positive' %>"><%= modifiers[stat] %></span>
+        </div>
+      <% end %>
+    </section>
+  </main>
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</body>
+
+</html>
