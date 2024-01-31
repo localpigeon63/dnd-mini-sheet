@@ -29,3 +29,6 @@ get '/' do
 
   erb(:index, {locals: data})
 end
+
+puts attributes
+puts modifiers
